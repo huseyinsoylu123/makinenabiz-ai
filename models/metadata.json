@@ -1,0 +1,79 @@
+{
+  "model_version": "1.0.0",
+  "algorithm": "KNeighborsClassifier",
+  "model_name": "KNN (k=9)",
+  "hyperparameters": {
+    "n_neighbors": 9,
+    "weights": "distance"
+  },
+  "trained_at": "2026-10-26T17:57:02+00:00",
+  "features": [
+    "Type",
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "target": "Machine failure",
+  "excluded_columns": [
+    "UDI",
+    "Product ID",
+    "TWF",
+    "HDF",
+    "PWF",
+    "OSF",
+    "RNF"
+  ],
+  "dataset": {
+    "name": "AI4I 2020 Predictive Maintenance Dataset (UCI, id 601)",
+    "doi": "10.24432/C5HS5C",
+    "license": "CC BY 4.0",
+    "file": "data/ai4i2020.csv",
+    "rows": 10000,
+    "failure_rate": 0.0339
+  },
+  "split": {
+    "train": 6000,
+    "validation": 2000,
+    "test": 2000,
+    "stratified": true,
+    "random_state": 42
+  },
+  "selection_criterion": "Doğrulama kümesinde arıza sınıfı F1 (eşitlikte PR-AUC); eşik doğrulamada seçildi",
+  "decision_threshold": 0.3,
+  "validation_metrics": {
+    "accuracy": 0.976,
+    "precision": 0.7083333333333334,
+    "recall": 0.5,
+    "f1": 0.5862068965517241,
+    "pr_auc": 0.5527371023332717,
+    "brier": 0.02178630927182349,
+    "false_alarm_rate": 0.007246376811594203,
+    "confusion_matrix": {
+      "tn": 1918,
+      "fp": 14,
+      "fn": 34,
+      "tp": 34
+    },
+    "threshold": 0.3
+  },
+  "test_metrics": {
+    "accuracy": 0.9695,
+    "precision": 0.5660377358490566,
+    "recall": 0.4411764705882353,
+    "f1": 0.49586776859504134,
+    "pr_auc": 0.4984681692903272,
+    "brier": 0.022866263431640985,
+    "false_alarm_rate": 0.011904761904761904,
+    "confusion_matrix": {
+      "tn": 1909,
+      "fp": 23,
+      "fn": 38,
+      "tp": 30
+    },
+    "threshold": 0.3
+  },
+  "python_version": "3.9.6",
+  "sklearn_version": "1.5.2"
+}

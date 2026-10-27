@@ -1,0 +1,221 @@
+{
+  "class_distribution": {
+    "tum_veri": {
+      "0": 9661,
+      "1": 339
+    },
+    "egitim": {
+      "0": 5797,
+      "1": 203
+    },
+    "dogrulama": {
+      "0": 1932,
+      "1": 68
+    },
+    "test": {
+      "0": 1932,
+      "1": 68
+    }
+  },
+  "validation_comparison": [
+    {
+      "model": "KNN (k=3)",
+      "accuracy": 0.9725,
+      "precision": 0.6511627906976745,
+      "recall": 0.4117647058823529,
+      "f1": 0.5045045045045045,
+      "pr_auc": 0.48164119031151154,
+      "brier": 0.022981332948656265,
+      "false_alarm_rate": 0.007763975155279503,
+      "confusion_matrix": {
+        "tn": 1917,
+        "fp": 15,
+        "fn": 40,
+        "tp": 28
+      },
+      "threshold": 0.4
+    },
+    {
+      "model": "KNN (k=5)",
+      "accuracy": 0.973,
+      "precision": 0.6521739130434783,
+      "recall": 0.4411764705882353,
+      "f1": 0.5263157894736842,
+      "pr_auc": 0.5096666023573225,
+      "brier": 0.022292569466351865,
+      "false_alarm_rate": 0.008281573498964804,
+      "confusion_matrix": {
+        "tn": 1916,
+        "fp": 16,
+        "fn": 38,
+        "tp": 30
+      },
+      "threshold": 0.35
+    },
+    {
+      "model": "KNN (k=7)",
+      "accuracy": 0.975,
+      "precision": 0.7045454545454546,
+      "recall": 0.45588235294117646,
+      "f1": 0.5535714285714286,
+      "pr_auc": 0.5444197340287106,
+      "brier": 0.021897151473147566,
+      "false_alarm_rate": 0.006728778467908903,
+      "confusion_matrix": {
+        "tn": 1919,
+        "fp": 13,
+        "fn": 37,
+        "tp": 31
+      },
+      "threshold": 0.3
+    },
+    {
+      "model": "KNN (k=9)",
+      "accuracy": 0.976,
+      "precision": 0.7083333333333334,
+      "recall": 0.5,
+      "f1": 0.5862068965517241,
+      "pr_auc": 0.5527371023332717,
+      "brier": 0.02178630927182349,
+      "false_alarm_rate": 0.007246376811594203,
+      "confusion_matrix": {
+        "tn": 1918,
+        "fp": 14,
+        "fn": 34,
+        "tp": 34
+      },
+      "threshold": 0.3
+    },
+    {
+      "model": "KNN (k=11)",
+      "accuracy": 0.9725,
+      "precision": 0.6140350877192983,
+      "recall": 0.5147058823529411,
+      "f1": 0.56,
+      "pr_auc": 0.5658458263841676,
+      "brier": 0.021936792344392175,
+      "false_alarm_rate": 0.011387163561076604,
+      "confusion_matrix": {
+        "tn": 1910,
+        "fp": 22,
+        "fn": 33,
+        "tp": 35
+      },
+      "threshold": 0.25
+    },
+    {
+      "model": "Lojistik Regresyon (class_weight=balanced)",
+      "accuracy": 0.9305,
+      "precision": 0.26174496644295303,
+      "recall": 0.5735294117647058,
+      "f1": 0.35944700460829493,
+      "pr_auc": 0.3680167923558006,
+      "brier": 0.12405498615825111,
+      "false_alarm_rate": 0.056935817805383024,
+      "confusion_matrix": {
+        "tn": 1822,
+        "fp": 110,
+        "fn": 29,
+        "tp": 39
+      },
+      "threshold": 0.75
+    }
+  ],
+  "test_comparison": {
+    "KNN (k=9)": {
+      "accuracy": 0.9695,
+      "precision": 0.5660377358490566,
+      "recall": 0.4411764705882353,
+      "f1": 0.49586776859504134,
+      "pr_auc": 0.4984681692903272,
+      "brier": 0.022866263431640985,
+      "false_alarm_rate": 0.011904761904761904,
+      "confusion_matrix": {
+        "tn": 1909,
+        "fp": 23,
+        "fn": 38,
+        "tp": 30
+      },
+      "threshold": 0.3
+    },
+    "Lojistik Regresyon (class_weight=balanced)": {
+      "accuracy": 0.9335,
+      "precision": 0.2875816993464052,
+      "recall": 0.6470588235294118,
+      "f1": 0.39819004524886875,
+      "pr_auc": 0.3925866116687223,
+      "brier": 0.11949821353260774,
+      "false_alarm_rate": 0.05641821946169772,
+      "confusion_matrix": {
+        "tn": 1823,
+        "fp": 109,
+        "fn": 24,
+        "tp": 44
+      },
+      "threshold": 0.75
+    }
+  },
+  "chosen": "KNN (k=9)",
+  "calibration_test": [
+    {
+      "aralik": "0.0-0.2",
+      "n": 1903,
+      "ortalama_tahmin": 0.007310629868258466,
+      "gerceklesen_oran": 0.015764582238570676
+    },
+    {
+      "aralik": "0.2-0.4",
+      "n": 64,
+      "ortalama_tahmin": 0.26708056157687277,
+      "gerceklesen_oran": 0.25
+    },
+    {
+      "aralik": "0.4-0.6",
+      "n": 22,
+      "ortalama_tahmin": 0.4617797731419467,
+      "gerceklesen_oran": 0.5454545454545454
+    },
+    {
+      "aralik": "0.6-0.8",
+      "n": 10,
+      "ortalama_tahmin": 0.6791233941731367,
+      "gerceklesen_oran": 0.9
+    },
+    {
+      "aralik": "0.8-1.0",
+      "n": 1,
+      "ortalama_tahmin": 0.894693905223238,
+      "gerceklesen_oran": 1.0
+    }
+  ],
+  "demo_examples": [
+    {
+      "etiket": "düşük olasılık örneği",
+      "UDI": 960,
+      "girdi": {
+        "Type": "L",
+        "Air temperature [K]": 295.8,
+        "Process temperature [K]": 306.5,
+        "Rotational speed [rpm]": 1505.0,
+        "Torque [Nm]": 35.2,
+        "Tool wear [min]": 86.0
+      },
+      "gercek_etiket": 0,
+      "model_olasiligi": 0.0
+    },
+    {
+      "etiket": "yüksek olasılık örneği",
+      "UDI": 7998,
+      "girdi": {
+        "Type": "M",
+        "Air temperature [K]": 301.0,
+        "Process temperature [K]": 312.2,
+        "Rotational speed [rpm]": 2710.0,
+        "Torque [Nm]": 9.7,
+        "Tool wear [min]": 143.0
+      },
+      "gercek_etiket": 1,
+      "model_olasiligi": 0.894693905223238
+    }
+  ]
+}
